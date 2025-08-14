@@ -14,7 +14,6 @@ class alu_sequence extends uvm_sequence#(alu_sequence_item);
 			void'(req.randomize());
 			send_request(req);
 			wait_for_item_done();
-			$display("unblocked");
 		end
 	endtask
 endclass

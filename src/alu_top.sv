@@ -6,16 +6,18 @@ import uvm_pkg::*;
 import alu_pkg::*;
 module top;
 	bit clk = 0;
-	bit rst;
+//	bit rst;
 
 	always #5 clk = ~clk;
 
-	initial begin
+/*	initial begin
 		rst = 1;
 		repeat(3)@(posedge clk);
 		rst = 0;
-	end
-	alu_interface vif(clk,rst);
+	  end
+*/
+	
+	alu_interface vif(clk);
 
 	alu_design DUT(
 		.CLK(vif.clk),

@@ -21,22 +21,7 @@ class alu_driver extends uvm_driver #(alu_sequence_item);
 	task run_phase(uvm_phase phase);
 		forever begin  
 			seq_item_port.get_next_item(req);
-			req.rst = vif.alu_driver_cb.rst;
-			//driv_port.write(req);
-			if(vif.alu_driver_cb.rst == 1) 
-			begin
-				$display("reset signal applied");
-				vif.alu_driver_cb.opa <= 'b0;
-				vif.alu_driver_cb.opb <= 'b0;
-				vif.alu_driver_cb.mode <= 'b0;
-				vif.alu_driver_cb.cmd <= 'b0;
-				vif.alu_driver_cb.cin <= 'b0;
-				vif.alu_driver_cb.ce <= 'b0;
-				vif.alu_driver_cb.inp_valid <= 'b0;
-				$display("Driver @ %0t \n RST = %b | CE = %b | MODE = %b | CMD = %d | INP_VALID = %d | CIN = %b | OPA = %d | OPB = %d ",
-					$time, vif.alu_driver_cb.rst , vif.alu_driver_cb.ce , vif.alu_driver_cb.mode , vif.alu_driver_cb.cmd , vif.alu_driver_cb.inp_valid , 									  vif.alu_driver_cb.cin , vif.alu_driver_cb.opa , vif.alu_driver_cb.opb );
-				repeat(3) @(vif.alu_driver_cb);       
-			end  
+			vif.alu_driver_cb.rst       <= req.rst;
 			vif.alu_driver_cb.ce        <= req.ce;
 			vif.alu_driver_cb.mode      <= req.mode;
 			vif.alu_driver_cb.cin       <= req.cin;
@@ -44,15 +29,13 @@ class alu_driver extends uvm_driver #(alu_sequence_item);
 			vif.alu_driver_cb.inp_valid <= req.inp_valid;
 			vif.alu_driver_cb.opa       <= req.opa;
 			vif.alu_driver_cb.opb       <= req.opb;
-			$display("Driver @ %0t \n RST = %b | CE = %b | MODE = %b | CMD = %d | INP_VALID = %d | CIN = %b | OPA = %d | OPB = %d ",
-				$time, vif.alu_driver_cb.rst , req.ce , req.mode , req.cmd , req.inp_valid , req.cin , req.opa , req.opb );
+			$display("Driver @ %0t \n RST = %b | CE = %b | MODE = %b | CMD = %d | INP_VALID = %d | CIN = %b | OPA = %d | OPB = %d |", $time, req.rst , req.ce , req.mode , req.cmd , req.inp_valid , req.cin , req.opa , req.opb );
 
 			if( ( req.mode == 1 ) && ( req.cmd == 9 || req.cmd == 10 ) )
 				repeat(4) @(vif.alu_driver_cb);  
 			else
 				repeat(3) @(vif.alu_driver_cb);     
 
-			$display("SENDING RESPONSE ");
 			driv_port.write(req);
 			seq_item_port.item_done();
 		end

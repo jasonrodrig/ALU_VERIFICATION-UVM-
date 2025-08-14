@@ -1,13 +1,13 @@
 
 
 class alu_sequence_item extends uvm_sequence_item;
-	logic rst;
+	rand logic rst;
 	rand logic ce, mode , cin;
 	rand logic [7:0] opa , opb;
 	rand logic [4:0] cmd;
 	rand logic [1:0] inp_valid;
-	logic [15:0] res ;
-	logic  err , oflow , cout , g , l , e;
+       logic [15:0] res ;
+	     logic  err , oflow , cout , g , l , e;
 
 	`uvm_object_utils_begin(alu_sequence_item)
 
@@ -33,8 +33,9 @@ class alu_sequence_item extends uvm_sequence_item;
 		super.new(name);
 	endfunction
 
-	constraint ce_distribution {  ce == 1;
-		//ce dist{ 1:=10 , 0:=2};
+	constraint ce_distribution {
+		rst dist{ 0:=10 , 1:=2};
+		ce  dist{ 1:=10 , 0:=2};
 		cmd dist{ 0:=2 , 9:=1 , 2:=2};
 	};
 	//constraint input_range { inp_valid inside {[ 1 : 3]};};

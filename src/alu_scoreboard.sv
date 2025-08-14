@@ -58,9 +58,9 @@ class alu_scoreboard extends uvm_scoreboard;
 		alu_sequence_item packet_4;
 		packet_4 = monitor_queue.pop_front();
 		//  $display("scoreboard : monitor");
-		//$display("scoreboard: Monitor @ %0t \n RES = %d | OFLOW = %b | COUT = %b | G = %b | L = %b | E = %b | ERR = %b |",$time, packet_4.res , packet_4.oflow ,      					packet_4.cout , packet_4.g , packet_4.l, packet_4.e , packet_4.err );
+		$display("scoreboard: Monitor @ %0t \n RES = %d | OFLOW = %b | COUT = %b | G = %b | L = %b | E = %b | ERR = %b |", $time, packet_4.res , packet_4.oflow , packet_4.cout ,  packet_4.g , packet_4.l, packet_4.e , packet_4.err );
 		monitor_results = { packet_4.res, packet_4.oflow, packet_4.cout, packet_4.g, packet_4.l, packet_4.e, packet_4.err };
-		$display("monitor_results_stored = %b", monitor_results);
+		$display("monitor_results_stored   = %b", monitor_results);
 	endtask
 
 	task extract_inputs_from_driver();
@@ -95,6 +95,7 @@ class alu_scoreboard extends uvm_scoreboard;
 			else
 				logical_operation(packet_3);
 		end
+		$display("scoreboard: Reference@ %0t \n RES = %d | OFLOW = %b | COUT = %b | G = %b | L = %b | E = %b | ERR = %b |", $time, ref_res , ref_oflow , ref_cout , ref_g , ref_l , ref_e , ref_err );
 		reference_results = { ref_res, ref_oflow, ref_cout, ref_g, ref_l, ref_e, ref_err };
 		$display("reference_results_stored = %b", reference_results);
 
@@ -108,7 +109,7 @@ class alu_scoreboard extends uvm_scoreboard;
 				begin
 					ref_res = packet_3.opa + packet_3.opb;
 					ref_cout = ( ref_res[8] ) ? 1 : 0;
-					$display( "ref_res = %0d | ref_cout = %0d ", ref_res, ref_cout);
+	//				$display( "ref_res = %0d | ref_cout = %0d ", ref_res, ref_cout);
 				end
 				else ref_err = 1;
 			end
@@ -127,7 +128,7 @@ class alu_scoreboard extends uvm_scoreboard;
 				begin
 					ref_res = packet_3.opa + packet_3.opb + packet_3.cin;
 					ref_cout = ( ref_res[8] ) ? 1 : 0;
-					$display( "ref_res = %0d | ref_cout = %0d ", ref_res, ref_cout);
+		//			$display( "ref_res = %0d | ref_cout = %0d ", ref_res, ref_cout);
 				end
 				else ref_err = 1;
 			end
@@ -212,7 +213,7 @@ class alu_scoreboard extends uvm_scoreboard;
 				if(packet_3.inp_valid == 3) begin
 					t_mul  = ( packet_3.opa + 1 ) * ( packet_3.opb + 1 );  
 					ref_res =  t_mul;
-					$display( "ref_res = %0d ", ref_res);
+			//		$display( "ref_res = %0d ", ref_res);
 				end
 				else ref_err = 1;
 			end
@@ -353,8 +354,10 @@ class alu_scoreboard extends uvm_scoreboard;
 	task comparision_report();
 		if( monitor_results === reference_results )
 			$display("<-----------------------------PASS----------------------------->" );
+		  //$display("################################################################" );
 		else
 			$display("<-----------------------------FAIL----------------------------->" );
+		  $display("########################################################################################" );
 	endtask
 
 endclass

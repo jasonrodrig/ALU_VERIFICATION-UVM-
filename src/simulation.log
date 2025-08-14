@@ -1,0 +1,10 @@
+# vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll alu_coverage.ucdb; run -all; exit" 
+# Start time: 16:43:58 on Aug 14,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: (vopt-13130) Failed to find design unit top.
+#         Searched libraries:
+#             work
+# Optimization failed
+# Error loading design
+# End time: 16:43:58 on Aug 14,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

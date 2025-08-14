@@ -11,26 +11,52 @@ class alu_coverage extends uvm_component;
 
 	covergroup driver_coverage;
 		option.per_instance = 1;
-		opa         : coverpoint driv.opa       { bins opa[] = {[0:255]} with (item / 32 ); }
-		opb         : coverpoint driv.opb       { bins opb[] = {[0:255]} with (item / 32 ); }
+		//opa         : coverpoint driv.opa       { bins opa[] = {[0:255]} with (item / 32 ); }
+		//opb         : coverpoint driv.opb       { bins opb[] = {[0:255]} with (item / 32 ); }
+		cmd         : coverpoint driv.cmd;      { 
+		                                         	bins arithmatic_cmd[] = {[0:10]} iff (driv.mode == 1'b1);
+                                        			bins logical_cmd[]    = {[0:13]} iff (driv.mode == 1'b0);
+		                                        }
 		inp_valid   : coverpoint driv.inp_valid { bins inp_valid[]  = {0,1,2,3}; }
-		cmd         : coverpoint driv.cmd       { 
-			bins arithmatic_cmd[] = {[0:10]} iff (driv.mode == 1'b1);
-			bins logical_cmd[]    = {[0:13]} iff (driv.mode == 1'b0);
-		}
 		cin         : coverpoint driv.cin       { bins cin[]        = {0,1}; }
 		mode        : coverpoint driv.mode      { bins mode[]       = {0,1}; } 
 		ce          : coverpoint driv.ce        { bins ce[]         = {0,1}; }
 		rst         : coverpoint driv.rst       { bins rst[]        = {0,1}; }
-		rstXce      : cross rst , ce ; 
-		ceXmode     : cross ce , mode;
-		modeXcmd    : cross mode , cmd;
+		rstXce        : cross rst , ce ; 
+		ceXmode       : cross ce , mode;
 		inp_validXmode: cross inp_valid , mode;
+		modeXcmd      : cross mode , cmd {
+			bins add              = binsof(cmd) intersect{0}  && binsof(mode) intersect{1};
+			bins sub              = binsof(cmd) intersect{1}  && binsof(mode) intersect{1};
+			bins add_cin          = binsof(cmd) intersect{2}  && binsof(mode) intersect{1};
+			bins sub_cin          = binsof(cmd) intersect{3}  && binsof(mode) intersect{1};
+			bins inc_A            = binsof(cmd) intersect{4}  && binsof(mode) intersect{1};
+			bins dec_A            = binsof(cmd) intersect{5}  && binsof(mode) intersect{1};
+			bins inc_B            = binsof(cmd) intersect{6}  && binsof(mode) intersect{1};
+			bins dec_B            = binsof(cmd) intersect{7}  && binsof(mode) intersect{1};
+			bins compare          = binsof(cmd) intersect{8}  && binsof(mode) intersect{1};
+			bins inc_mul          = binsof(cmd) intersect{9}  && binsof(mode) intersect{1};
+			bins shift_mul        = binsof(cmd) intersect{10} && binsof(mode) intersect{1};
+			bins and_op           = binsof(cmd) intersect{0}  && binsof(mode) intersect{0};
+			bins nand_op          = binsof(cmd) intersect{1}  && binsof(mode) intersect{0};
+			bins or_op            = binsof(cmd) intersect{2}  && binsof(mode) intersect{0};
+			bins nor_op           = binsof(cmd) intersect{3}  && binsof(mode) intersect{0};
+			bins xor_op           = binsof(cmd) intersect{4}  && binsof(mode) intersect{0};
+			bins xnor_op          = binsof(cmd) intersect{5}  && binsof(mode) intersect{0};
+			bins notA_op          = binsof(cmd) intersect{6}  && binsof(mode) intersect{0};
+			bins notB_op          = binsof(cmd) intersect{7}  && binsof(mode) intersect{0};
+			bins shift_right_A_op = binsof(cmd) intersect{8}  && binsof(mode) intersect{0};
+			bins shift_left_A_op  = binsof(cmd) intersect{9}  && binsof(mode) intersect{0};
+			bins shift_right_B_op = binsof(cmd) intersect{10} && binsof(mode) intersect{0};
+			bins shift_left_B_op  = binsof(cmd) intersect{11} && binsof(mode) intersect{0};
+			bins rotate_left_op   = binsof(cmd) intersect{12} && binsof(mode) intersect{0};
+			bins rotate_right_op  = binsof(cmd) intersect{13} && binsof(mode) intersect{0}; 
+		}
 	endgroup
 
 	covergroup monitor_coverage;
 		option.per_instance = 1;
-		result : coverpoint mon.res  { bins res_bins[]   = {[0:65535]} with (item / 64); }
+		//	result : coverpoint mon.res  { bins res_bins[]   = {[0:65535]} with (item / 64); }
 		oflow  : coverpoint mon.oflow{ bins oflow[]      = {0,1}; }
 		cout   : coverpoint mon.cout { bins cout[]       = {0,1}; }
 		err    : coverpoint mon.err  { bins err[]        = {0,1}; }

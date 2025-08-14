@@ -1,0 +1,10 @@
+var g_data = {
+c832:[4,'oflow',[],,'830',2,1,'\\/alu_pkg::alu_coverage::monitor_coverage ','795','work.alu_pkg::alu_coverage',[[],[0,'1','15',,'oflow[0]'],[0,'1','0',1,'oflow[1]']],[]],
+c833:[4,'cout',[],,'830',2,1,'\\/alu_pkg::alu_coverage::monitor_coverage ','795','work.alu_pkg::alu_coverage',[[],[0,'1','12',,'cout[0]'],[0,'1','3',,'cout[1]']],[]],
+c834:[4,'err',[],,'830',2,1,'\\/alu_pkg::alu_coverage::monitor_coverage ','795','work.alu_pkg::alu_coverage',[[],[0,'1','15',,'err[0]'],[0,'1','0',1,'err[1]']],[]],
+c835:[4,'g',[],,'830',2,1,'\\/alu_pkg::alu_coverage::monitor_coverage ','795','work.alu_pkg::alu_coverage',[[],[0,'1','15',,'g[0]'],[0,'1','0',1,'g[1]']],[]],
+c836:[4,'l',[],,'830',2,1,'\\/alu_pkg::alu_coverage::monitor_coverage ','795','work.alu_pkg::alu_coverage',[[],[0,'1','15',,'l[0]'],[0,'1','0',1,'l[1]']],[]],
+c837:[4,'e',[],,'830',2,1,'\\/alu_pkg::alu_coverage::monitor_coverage ','795','work.alu_pkg::alu_coverage',[[],[0,'1','15',,'e[0]'],[0,'1','0',1,'e[1]']],[]],
+dummyEnd:0
+};
+processCovergroupsData(g_data);
