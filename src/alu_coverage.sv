@@ -13,7 +13,7 @@ class alu_coverage extends uvm_component;
 		option.per_instance = 1;
 		//opa         : coverpoint driv.opa       { bins opa[] = {[0:255]} with (item / 32 ); }
 		//opb         : coverpoint driv.opb       { bins opb[] = {[0:255]} with (item / 32 ); }
-		cmd         : coverpoint driv.cmd;      { 
+		cmd         : coverpoint driv.cmd      { 
 		                                         	bins arithmatic_cmd[] = {[0:10]} iff (driv.mode == 1'b1);
                                         			bins logical_cmd[]    = {[0:13]} iff (driv.mode == 1'b0);
 		                                        }
