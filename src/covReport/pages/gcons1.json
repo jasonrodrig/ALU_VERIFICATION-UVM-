@@ -1,5 +1,0 @@
-var g_db_data = [
-{dummy:0},
-{name:'driver_coverage',f:1,type:6,id:714,tb:'124',h:'21',m:'103',hp:'16.93%',cov:['55.15%','Y'],g:'100.00%',gp:['55.15%','Y'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/alu_pkg/alu_coverage',parent:'713'},
-{name:'monitor_coverage',f:1,type:6,id:736,tb:'12',h:'7',m:'5',hp:'58.33%',cov:['58.33%','Y'],g:'100.00%',gp:['58.33%','Y'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/alu_pkg/alu_coverage',parent:'713'}];
-processConsCovergroupsData(g_db_data);
