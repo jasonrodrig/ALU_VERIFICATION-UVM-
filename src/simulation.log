@@ -1,10 +1,558 @@
 # vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll alu_coverage.ucdb; run -all; exit" 
-# Start time: 16:43:58 on Aug 14,2025
+# Start time: 13:34:57 on Aug 16,2025
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: (vopt-13130) Failed to find design unit top.
-#         Searched libraries:
-#             work
-# Optimization failed
-# Error loading design
-# End time: 16:43:58 on Aug 14,2025, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.alu_interface(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.alu_pkg(fast)
+# Loading work.alu_top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.alu_interface(fast)
+# Loading work.alu_design(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3015) alu_top.sv(22): [PCDPC] - Port size (17) does not match connection size (16) for port 'RES'. The port definition is at: alu_design.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /top/DUT File: alu_design.v
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# coverage save -onexit -assert -directive -cvg -codeAll alu_coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test alu_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# -----------------------------------------------------------------
+# Name                       Type                       Size  Value
+# -----------------------------------------------------------------
+# uvm_test_top               alu_test                   -     @471 
+#   alu_environment          alu_environment            -     @478 
+#     alu_agent              alu_agent                  -     @489 
+#       alu_driv             alu_driver                 -     @527 
+#         driv_port          uvm_analysis_port          -     @550 
+#         rsp_port           uvm_analysis_port          -     @542 
+#         seq_item_port      uvm_seq_item_pull_port     -     @534 
+#       alu_mon              alu_monitor                -     @667 
+#         mon_port           uvm_analysis_port          -     @674 
+#       alu_seqr             alu_sequencer              -     @558 
+#         rsp_export         uvm_analysis_export        -     @565 
+#         seq_item_export    uvm_seq_item_pull_imp      -     @659 
+#         arbitration_queue  array                      0     -    
+#         lock_queue         array                      0     -    
+#         num_last_reqs      integral                   32    'd1  
+#         num_last_rsps      integral                   32    'd1  
+#     alu_coverage           alu_coverage               -     @503 
+#       cov_driv_port        uvm_analysis_imp_driv_cg   -     @510 
+#       cov_mon_port         uvm_analysis_imp_mon_cg    -     @518 
+#     alu_scoreboard         alu_scoreboard             -     @496 
+#       driv_scb_port        uvm_analysis_imp_driv_scb  -     @693 
+#       mon_scb_port         uvm_analysis_imp_mon_scb   -     @701 
+# -----------------------------------------------------------------
+# 
+# Driver @ 0 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD =  5 | INP_VALID = 0 | CIN = 1 | OPA = 146 | OPB =  17 
+# SENDING RESPONSE 
+# Monitor @ 25 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD =  5 | INP_VALID = 0 | CIN = 1 | OPA = 146 | OPB =  17 |
+# Monitor @ 25 
+#  RES =     Z | OFLOW = z | COUT = z | G = z | L = z | E = z | ERR = z |
+# scoreboard: Reference@ 25 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 25 
+#  RES =     Z | OFLOW = z | COUT = z | G = z | L = z | E = z | ERR = z |
+# monitor_results_stored   = 0000000000000000000000
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+# Driver @ 25 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  7 | INP_VALID = 1 | CIN = 0 | OPA = 190 | OPB = 111 
+# SENDING RESPONSE 
+# Monitor @ 55 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  7 | INP_VALID = 1 | CIN = 0 | OPA = 190 | OPB = 111 |
+# Monitor @ 55 
+#  RES =     Z | OFLOW = z | COUT = z | G = z | L = z | E = z | ERR = z |
+# scoreboard: Reference@ 55 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 55 
+#  RES =     Z | OFLOW = z | COUT = z | G = z | L = z | E = z | ERR = z |
+# monitor_results_stored   = 0000000000000000000000
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+# Driver @ 55 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD =  3 | INP_VALID = 0 | CIN = 0 | OPA =  19 | OPB = 253 
+# SENDING RESPONSE 
+# Monitor @ 85 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD =  3 | INP_VALID = 0 | CIN = 0 | OPA =  19 | OPB = 253 |
+# Monitor @ 85 
+#  RES =     Z | OFLOW = z | COUT = z | G = z | L = z | E = z | ERR = z |
+# scoreboard: Reference@ 85 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 85 
+#  RES =     Z | OFLOW = z | COUT = z | G = z | L = z | E = z | ERR = z |
+# monitor_results_stored   = 0000000000000000000000
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+# Driver @ 85 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  1 | INP_VALID = 3 | CIN = 1 | OPA = 249 | OPB = 192 
+# SENDING RESPONSE 
+# Monitor @ 115 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  1 | INP_VALID = 3 | CIN = 1 | OPA = 249 | OPB = 192 |
+# Monitor @ 115 
+#  RES =    57 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 115 
+#  RES =    57 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# reference_results_stored = 0000000000111001000000
+# scoreboard: Monitor @ 115 
+#  RES =    57 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000000000111001000000
+# <-----------------------------PASS----------------------------->
+########################################################################################
+# Driver @ 115 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  5 | INP_VALID = 3 | CIN = 0 | OPA = 165 | OPB = 218 
+# SENDING RESPONSE 
+# Monitor @ 145 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  5 | INP_VALID = 3 | CIN = 0 | OPA = 165 | OPB = 218 |
+# Monitor @ 145 
+#  RES =   164 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 145 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 145 
+#  RES =   164 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000000010100100000000
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+# Driver @ 145 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 10 | INP_VALID = 2 | CIN = 1 | OPA =  22 | OPB = 171 
+# SENDING RESPONSE 
+# Monitor @ 175 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 10 | INP_VALID = 2 | CIN = 1 | OPA =  22 | OPB = 171 |
+# Monitor @ 175 
+#  RES =    86 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 175 
+#  RES =    85 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# reference_results_stored = 0000000001010101000000
+# scoreboard: Monitor @ 175 
+#  RES =    86 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000000001010110000000
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+# Driver @ 175 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  1 | INP_VALID = 3 | CIN = 1 | OPA =  20 | OPB = 190 
+# SENDING RESPONSE 
+# Monitor @ 205 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  1 | INP_VALID = 3 | CIN = 1 | OPA =  20 | OPB = 190 |
+# Monitor @ 205 
+#  RES = 65366 | OFLOW = 1 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 205 
+#  RES = 65366 | OFLOW = 1 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# reference_results_stored = 1111111101010110100000
+# scoreboard: Monitor @ 205 
+#  RES = 65366 | OFLOW = 1 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 1111111101010110100000
+# <-----------------------------PASS----------------------------->
+########################################################################################
+# Driver @ 205 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  3 | INP_VALID = 3 | CIN = 1 | OPA =  74 | OPB = 157 
+# SENDING RESPONSE 
+# Monitor @ 235 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  3 | INP_VALID = 3 | CIN = 1 | OPA =  74 | OPB = 157 |
+# Monitor @ 235 
+#  RES = 65452 | OFLOW = 1 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 235 
+#  RES = 65452 | OFLOW = 1 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# reference_results_stored = 1111111110101100100000
+# scoreboard: Monitor @ 235 
+#  RES = 65452 | OFLOW = 1 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 1111111110101100100000
+# <-----------------------------PASS----------------------------->
+########################################################################################
+# Driver @ 235 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  1 | INP_VALID = 3 | CIN = 0 | OPA = 232 | OPB = 179 
+# SENDING RESPONSE 
+# Monitor @ 265 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  1 | INP_VALID = 3 | CIN = 0 | OPA = 232 | OPB = 179 |
+# Monitor @ 265 
+#  RES =    53 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 265 
+#  RES =    53 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# reference_results_stored = 0000000000110101000000
+# scoreboard: Monitor @ 265 
+#  RES =    53 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000000000110101000000
+# <-----------------------------PASS----------------------------->
+########################################################################################
+# Driver @ 265 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD =  2 | INP_VALID = 0 | CIN = 0 | OPA =  12 | OPB = 228 
+# SENDING RESPONSE 
+# Monitor @ 295 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD =  2 | INP_VALID = 0 | CIN = 0 | OPA =  12 | OPB = 228 |
+# Monitor @ 295 
+#  RES =    95 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 295 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 295 
+#  RES =    95 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000000001011111000000
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+# Driver @ 295 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  7 | INP_VALID = 2 | CIN = 0 | OPA = 116 | OPB = 215 
+# SENDING RESPONSE 
+# Monitor @ 325 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  7 | INP_VALID = 2 | CIN = 0 | OPA = 116 | OPB = 215 |
+# Monitor @ 325 
+#  RES =   216 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 325 
+#  RES =   214 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# reference_results_stored = 0000000011010110000000
+# scoreboard: Monitor @ 325 
+#  RES =   216 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000000011011000000000
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+# Driver @ 325 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  3 | INP_VALID = 3 | CIN = 0 | OPA = 126 | OPB =  50 
+# SENDING RESPONSE 
+# Monitor @ 355 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  3 | INP_VALID = 3 | CIN = 0 | OPA = 126 | OPB =  50 |
+# Monitor @ 355 
+#  RES =    76 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 355 
+#  RES =    76 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# reference_results_stored = 0000000001001100000000
+# scoreboard: Monitor @ 355 
+#  RES =    76 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000000001001100000000
+# <-----------------------------PASS----------------------------->
+########################################################################################
+# Driver @ 355 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  2 | INP_VALID = 3 | CIN = 0 | OPA = 227 | OPB = 193 
+# SENDING RESPONSE 
+# Monitor @ 385 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  2 | INP_VALID = 3 | CIN = 0 | OPA = 227 | OPB = 193 |
+# Monitor @ 385 
+#  RES =   420 | OFLOW = 0 | COUT = 1 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 385 
+#  RES =   420 | OFLOW = 0 | COUT = 1 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# reference_results_stored = 0000000110100100010000
+# scoreboard: Monitor @ 385 
+#  RES =   420 | OFLOW = 0 | COUT = 1 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000000110100100010000
+# <-----------------------------PASS----------------------------->
+########################################################################################
+#  count =           1 
+# Driver @ 385 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 1 | CIN = 1 | OPA = 195 | OPB = 207 
+#  count =           2 
+# Driver @ 415 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 1 | CIN = 1 | OPA = 128 | OPB =  31 
+# Monitor @ 415 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 1 | CIN = 1 | OPA = 195 | OPB = 207 |
+# Monitor @ 415 
+#  RES =   135 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 415 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 415 
+#  RES =   135 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000010000111000001
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+#  count =           3 
+# Driver @ 445 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 3 | CIN = 1 | OPA =  28 | OPB = 116 
+# Monitor @ 445 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 1 | CIN = 1 | OPA = 128 | OPB =  31 |
+# Monitor @ 445 
+#  RES =     1 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 445 
+#  RES =   193 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000011000001000001
+# scoreboard: Monitor @ 445 
+#  RES =     1 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000000000001000001
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+# SENDING RESPONSE 
+# Monitor @ 475 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 3 | CIN = 1 | OPA =  28 | OPB = 116 |
+# Monitor @ 475 
+#  RES =   193 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 475 
+#  RES =   193 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000011000001000001
+# scoreboard: Monitor @ 475 
+#  RES =   193 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000011000001000001
+# <-----------------------------PASS----------------------------->
+########################################################################################
+#  count =           1 
+# Driver @ 475 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 2 | CIN = 0 | OPA = 109 | OPB = 166 
+#  count =           2 
+# Driver @ 505 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 2 | CIN = 1 | OPA = 220 | OPB = 221 
+# Monitor @ 505 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 2 | CIN = 0 | OPA = 109 | OPB = 166 |
+# Monitor @ 505 
+#  RES =     7 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 505 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 505 
+#  RES =     7 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000000000111000001
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+#  count =           3 
+# Driver @ 535 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 0 | CIN = 0 | OPA = 130 | OPB =  17 
+# Monitor @ 535 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 2 | CIN = 1 | OPA = 220 | OPB = 221 |
+# Monitor @ 535 
+#  RES =   131 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 535 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 535 
+#  RES =   131 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000010000011000001
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+#  count =           4 
+# Driver @ 565 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 1 | CIN = 1 | OPA = 196 | OPB = 164 
+# Monitor @ 565 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 0 | CIN = 0 | OPA = 130 | OPB =  17 |
+# Monitor @ 565 
+#  RES =   131 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 565 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 565 
+#  RES =   131 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000010000011000001
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+#  count =           5 
+# Driver @ 595 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 2 | CIN = 1 | OPA =  15 | OPB = 126 
+# Monitor @ 595 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 1 | CIN = 1 | OPA = 196 | OPB = 164 |
+# Monitor @ 595 
+#  RES =   152 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 595 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 595 
+#  RES =   152 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000010011000000001
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+#  count =           6 
+# Driver @ 625 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 2 | CIN = 0 | OPA = 251 | OPB = 173 
+# Monitor @ 625 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 2 | CIN = 1 | OPA =  15 | OPB = 126 |
+# Monitor @ 625 
+#  RES =    49 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 625 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 625 
+#  RES =    49 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000000110001000001
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+#  count =           7 
+# Driver @ 655 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 0 | CIN = 0 | OPA = 116 | OPB =   8 
+# Monitor @ 655 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 2 | CIN = 0 | OPA = 251 | OPB = 173 |
+# Monitor @ 655 
+#  RES =   152 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 655 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 655 
+#  RES =   152 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000010011000000001
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+#  count =           8 
+# Driver @ 685 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 1 | CIN = 0 | OPA = 113 | OPB =  30 
+# Monitor @ 685 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 0 | CIN = 0 | OPA = 116 | OPB =   8 |
+# Monitor @ 685 
+#  RES =   152 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 685 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 685 
+#  RES =   152 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000010011000000001
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+#  count =           9 
+# Driver @ 715 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 3 | CIN = 0 | OPA = 169 | OPB = 197 
+# Monitor @ 715 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 1 | CIN = 0 | OPA = 113 | OPB =  30 |
+# Monitor @ 715 
+#  RES =    46 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 715 
+#  RES =    53 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000110101000001
+# scoreboard: Monitor @ 715 
+#  RES =    46 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000000101110000001
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+# SENDING RESPONSE 
+# Monitor @ 745 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 12 | INP_VALID = 3 | CIN = 0 | OPA = 169 | OPB = 197 |
+# Monitor @ 745 
+#  RES =    53 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# scoreboard: Reference@ 745 
+#  RES =    53 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000110101000001
+# scoreboard: Monitor @ 745 
+#  RES =    53 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# monitor_results_stored   = 0000000000110101000001
+# <-----------------------------PASS----------------------------->
+########################################################################################
+# Driver @ 745 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  8 | INP_VALID = 0 | CIN = 0 | OPA =  44 | OPB =  97 
+# SENDING RESPONSE 
+# Monitor @ 775 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  8 | INP_VALID = 0 | CIN = 0 | OPA =  44 | OPB =  97 |
+# Monitor @ 775 
+#  RES =     Z | OFLOW = z | COUT = z | G = z | L = z | E = z | ERR = z |
+# scoreboard: Reference@ 775 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 775 
+#  RES =     Z | OFLOW = z | COUT = z | G = z | L = z | E = z | ERR = z |
+# monitor_results_stored   = 0000000000000000000000
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+# Driver @ 775 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD =  6 | INP_VALID = 1 | CIN = 1 | OPA = 216 | OPB =  36 
+# SENDING RESPONSE 
+# Monitor @ 805 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD =  6 | INP_VALID = 1 | CIN = 1 | OPA = 216 | OPB =  36 |
+# Monitor @ 805 
+#  RES =    39 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 805 
+#  RES =    39 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# reference_results_stored = 0000000000100111000000
+# scoreboard: Monitor @ 805 
+#  RES =    39 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000000000100111000000
+# <-----------------------------PASS----------------------------->
+########################################################################################
+# Driver @ 805 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 11 | INP_VALID = 3 | CIN = 0 | OPA =  81 | OPB =  69 
+# SENDING RESPONSE 
+# Monitor @ 835 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD = 11 | INP_VALID = 3 | CIN = 0 | OPA =  81 | OPB =  69 |
+# Monitor @ 835 
+#  RES =   138 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 835 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 835 
+#  RES =   138 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000000010001010000000
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+#  count =           1 
+# Driver @ 835 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  9 | INP_VALID = 3 | CIN = 1 | OPA = 194 | OPB =  18 
+# SENDING RESPONSE 
+# Monitor @ 875 
+#  RST = 0 | CE = 1 | MODE = 1 | CMD =  9 | INP_VALID = 3 | CIN = 1 | OPA = 194 | OPB =  18 |
+# Monitor @ 875 
+#  RES =  3705 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 875 
+#  RES =  3705 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# reference_results_stored = 0000111001111001000000
+# scoreboard: Monitor @ 875 
+#  RES =  3705 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000111001111001000000
+# <-----------------------------PASS----------------------------->
+########################################################################################
+# Driver @ 875 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD =  9 | INP_VALID = 0 | CIN = 0 | OPA = 137 | OPB =  94 
+# SENDING RESPONSE 
+# Monitor @ 905 
+#  RST = 0 | CE = 1 | MODE = 0 | CMD =  9 | INP_VALID = 0 | CIN = 0 | OPA = 137 | OPB =  94 |
+# Monitor @ 905 
+#  RES =   132 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# scoreboard: Reference@ 905 
+#  RES =     0 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 1 |
+# reference_results_stored = 0000000000000000000001
+# scoreboard: Monitor @ 905 
+#  RES =   132 | OFLOW = 0 | COUT = 0 | G = 0 | L = 0 | E = 0 | ERR = 0 |
+# monitor_results_stored   = 0000000010000100000000
+# <-----------------------------FAIL----------------------------->
+########################################################################################
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 905: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO alu_coverage.sv(94) @ 905: uvm_test_top.alu_environment.alu_coverage [alu_coverage] [DRIVER] Coverage ------> 68.86%,
+# UVM_INFO alu_coverage.sv(95) @ 905: uvm_test_top.alu_environment.alu_coverage [alu_coverage] [MONITOR] Coverage ------> 75.00%
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    7
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [alu_coverage]     2
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 905 ns  Iteration: 63  Instance: /top
+# Saving coverage database on exit...
+# End time: 13:35:01 on Aug 16,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 2

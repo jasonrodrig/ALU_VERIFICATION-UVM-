@@ -1,5 +1,5 @@
 $date
-	Thu Aug 14 16:39:31 2025
+	Sat Aug 16 13:35:01 2025
 $end
 $version
 	QuestaSim Version 10.6c
@@ -15,133 +15,130 @@ $scope module top $end
 $var reg 1 ! clk $end
 
 $scope module DUT $end
-$var parameter 32 " OPERAND_WIDTH $end
-$var parameter 32 # CMD_WIDTH $end
-$var wire 1 $ CLK $end
-$var wire 1 % RST $end
-$var wire 1 & MODE $end
-$var wire 1 ' CE $end
-$var wire 1 ( CIN $end
-$var wire 1 ) CMD [3] $end
-$var wire 1 * CMD [2] $end
-$var wire 1 + CMD [1] $end
-$var wire 1 , CMD [0] $end
-$var wire 1 - INP_VALID [1] $end
-$var wire 1 . INP_VALID [0] $end
-$var wire 1 / OPA [7] $end
-$var wire 1 0 OPA [6] $end
-$var wire 1 1 OPA [5] $end
-$var wire 1 2 OPA [4] $end
-$var wire 1 3 OPA [3] $end
-$var wire 1 4 OPA [2] $end
-$var wire 1 5 OPA [1] $end
-$var wire 1 6 OPA [0] $end
-$var wire 1 7 OPB [7] $end
-$var wire 1 8 OPB [6] $end
-$var wire 1 9 OPB [5] $end
-$var wire 1 : OPB [4] $end
-$var wire 1 ; OPB [3] $end
-$var wire 1 < OPB [2] $end
-$var wire 1 = OPB [1] $end
-$var wire 1 > OPB [0] $end
-$var reg 1 ? ERR $end
-$var reg 1 @ OFLOW $end
-$var reg 1 A E $end
+$var parameter 32 " DW $end
+$var parameter 32 # CW $end
+$var wire 1 $ OPA [7] $end
+$var wire 1 % OPA [6] $end
+$var wire 1 & OPA [5] $end
+$var wire 1 ' OPA [4] $end
+$var wire 1 ( OPA [3] $end
+$var wire 1 ) OPA [2] $end
+$var wire 1 * OPA [1] $end
+$var wire 1 + OPA [0] $end
+$var wire 1 , OPB [7] $end
+$var wire 1 - OPB [6] $end
+$var wire 1 . OPB [5] $end
+$var wire 1 / OPB [4] $end
+$var wire 1 0 OPB [3] $end
+$var wire 1 1 OPB [2] $end
+$var wire 1 2 OPB [1] $end
+$var wire 1 3 OPB [0] $end
+$var wire 1 4 CLK $end
+$var wire 1 5 RST $end
+$var wire 1 6 CE $end
+$var wire 1 7 MODE $end
+$var wire 1 8 CIN $end
+$var wire 1 9 CMD [3] $end
+$var wire 1 : CMD [2] $end
+$var wire 1 ; CMD [1] $end
+$var wire 1 < CMD [0] $end
+$var wire 1 = INP_VALID [1] $end
+$var wire 1 > INP_VALID [0] $end
+$var reg 17 ? RES [16:0] $end
+$var reg 1 @ COUT $end
+$var reg 1 A OFLOW $end
 $var reg 1 B G $end
-$var reg 1 C L $end
-$var wire 1 D COUT $end
-$var reg 16 E RES [15:0] $end
-$var reg 4 F t_CMD [3:0] $end
-$var reg 8 G t_OPA [7:0] $end
-$var reg 8 H t_OPB [7:0] $end
-$var reg 1 I t_CIN $end
-$var reg 1 J temp_ovr_cin $end
-$var reg 1 K t_MODE $end
-$var reg 1 L TEMP_MODE $end
-$var reg 4 M TEMP_CMD [3:0] $end
-$var reg 2 N t_INP_VALID [1:0] $end
-$var reg 8 O shf_MUL [7:0] $end
-$var reg 16 P t_MUL [15:0] $end
-$var reg 8 Q temp_ovr_a [7:0] $end
-$var reg 8 R temp_ovr_b [7:0] $end
+$var reg 1 C E $end
+$var reg 1 D L $end
+$var reg 1 E ERR $end
+$var reg 8 F OPA_1 [7:0] $end
+$var reg 8 G OPB_1 [7:0] $end
+$var reg 8 H oprd1 [7:0] $end
+$var reg 8 I oprd2 [7:0] $end
+$var reg 4 J CMD_tmp [3:0] $end
+$var reg 8 K AU_out_tmp1 [7:0] $end
+$var reg 8 L AU_out_tmp2 [7:0] $end
+$var reg 5 M wait_counter [4:0] $end
+$var reg 1 N oprd1_valid $end
+$var reg 1 O oprd2_valid $end
 $upscope $end
 $upscope $end
 
 $scope begin uvm_pkg $end
-$var parameter 32 S UVM_HDL_MAX_WIDTH $end
-$var parameter 32 T UVM_STREAMBITS $end
-$var parameter 32 U UVM_RADIX $end
-$var parameter 32 V UVM_MACRO_NUMFLAGS $end
-$var parameter 32 W UVM_DEFAULT $end
-$var parameter 32 X UVM_ALL_ON $end
-$var parameter 32 Y UVM_FLAGS_ON $end
-$var parameter 32 Z UVM_FLAGS_OFF $end
-$var parameter 32 [ UVM_COPY $end
-$var parameter 32 \ UVM_NOCOPY $end
-$var parameter 32 ] UVM_COMPARE $end
-$var parameter 32 ^ UVM_NOCOMPARE $end
-$var parameter 32 _ UVM_PRINT $end
-$var parameter 32 ` UVM_NOPRINT $end
-$var parameter 32 a UVM_RECORD $end
-$var parameter 32 b UVM_NORECORD $end
-$var parameter 32 c UVM_PACK $end
-$var parameter 32 d UVM_NOPACK $end
-$var parameter 32 e UVM_PHYSICAL $end
-$var parameter 32 f UVM_ABSTRACT $end
-$var parameter 32 g UVM_READONLY $end
-$var parameter 32 h UVM_NODEFPRINT $end
-$var parameter 32 i UVM_MACRO_EXTRAS $end
-$var parameter 32 j UVM_FLAGS $end
-$var parameter 32 k UVM_UNPACK $end
-$var parameter 32 l UVM_CHECK_FIELDS $end
-$var parameter 32 m UVM_END_DATA_EXTRA $end
-$var parameter 32 n UVM_START_FUNCS $end
-$var parameter 32 o UVM_SET $end
-$var parameter 32 p UVM_SETINT $end
-$var parameter 32 q UVM_SETOBJ $end
-$var parameter 32 r UVM_SETSTR $end
-$var parameter 32 s UVM_END_FUNCS $end
-$var parameter 32 t UVM_STR_CRC_POLYNOMIAL $end
-$var parameter 32 u UVM_STDOUT $end
-$var parameter 32 v UVM_LINE_WIDTH $end
-$var parameter 32 w UVM_NUM_LINES $end
-$var parameter 32 x UVM_SMALL_STRING $end
-$var parameter 32 y UVM_LARGE_STRING $end
-$var reg 1 z uvm_start_uvm_declarations $end
-$var integer 32 { uvm_global_random_seed $end
-$var integer 32 | UVM_UNBOUNDED_CONNECTIONS $end
+$var parameter 32 P UVM_HDL_MAX_WIDTH $end
+$var parameter 32 Q UVM_STREAMBITS $end
+$var parameter 32 R UVM_RADIX $end
+$var parameter 32 S UVM_MACRO_NUMFLAGS $end
+$var parameter 32 T UVM_DEFAULT $end
+$var parameter 32 U UVM_ALL_ON $end
+$var parameter 32 V UVM_FLAGS_ON $end
+$var parameter 32 W UVM_FLAGS_OFF $end
+$var parameter 32 X UVM_COPY $end
+$var parameter 32 Y UVM_NOCOPY $end
+$var parameter 32 Z UVM_COMPARE $end
+$var parameter 32 [ UVM_NOCOMPARE $end
+$var parameter 32 \ UVM_PRINT $end
+$var parameter 32 ] UVM_NOPRINT $end
+$var parameter 32 ^ UVM_RECORD $end
+$var parameter 32 _ UVM_NORECORD $end
+$var parameter 32 ` UVM_PACK $end
+$var parameter 32 a UVM_NOPACK $end
+$var parameter 32 b UVM_PHYSICAL $end
+$var parameter 32 c UVM_ABSTRACT $end
+$var parameter 32 d UVM_READONLY $end
+$var parameter 32 e UVM_NODEFPRINT $end
+$var parameter 32 f UVM_MACRO_EXTRAS $end
+$var parameter 32 g UVM_FLAGS $end
+$var parameter 32 h UVM_UNPACK $end
+$var parameter 32 i UVM_CHECK_FIELDS $end
+$var parameter 32 j UVM_END_DATA_EXTRA $end
+$var parameter 32 k UVM_START_FUNCS $end
+$var parameter 32 l UVM_SET $end
+$var parameter 32 m UVM_SETINT $end
+$var parameter 32 n UVM_SETOBJ $end
+$var parameter 32 o UVM_SETSTR $end
+$var parameter 32 p UVM_END_FUNCS $end
+$var parameter 32 q UVM_STR_CRC_POLYNOMIAL $end
+$var parameter 32 r UVM_STDOUT $end
+$var parameter 32 s UVM_LINE_WIDTH $end
+$var parameter 32 t UVM_NUM_LINES $end
+$var parameter 32 u UVM_SMALL_STRING $end
+$var parameter 32 v UVM_LARGE_STRING $end
+$var reg 1 w uvm_start_uvm_declarations $end
+$var integer 32 x uvm_global_random_seed $end
+$var integer 32 y UVM_UNBOUNDED_CONNECTIONS $end
 
 $scope function uvm_hdl_check_path $end
-$var integer 32 } uvm_hdl_check_path $end
+$var integer 32 z uvm_hdl_check_path $end
 $upscope $end
 
 $scope function uvm_hdl_deposit $end
-$var integer 32 ~ uvm_hdl_deposit $end
-$var reg 1024 !! value [1023:0] $end
+$var integer 32 { uvm_hdl_deposit $end
+$var reg 1024 | value [1023:0] $end
 $upscope $end
 
 $scope function uvm_hdl_force $end
-$var integer 32 "! uvm_hdl_force $end
-$var reg 1024 #! value [1023:0] $end
+$var integer 32 } uvm_hdl_force $end
+$var reg 1024 ~ value [1023:0] $end
 $upscope $end
 
 $scope task uvm_hdl_force_time $end
-$var reg 1024 $! value [1023:0] $end
-$var time 64 %! force_time $end
+$var reg 1024 !! value [1023:0] $end
+$var time 64 "! force_time $end
 $upscope $end
 
 $scope function uvm_hdl_release_and_read $end
-$var integer 32 &! uvm_hdl_release_and_read $end
-$var reg 1024 '! value [1023:0] $end
+$var integer 32 #! uvm_hdl_release_and_read $end
+$var reg 1024 $! value [1023:0] $end
 $upscope $end
 
 $scope function uvm_hdl_release $end
-$var integer 32 (! uvm_hdl_release $end
+$var integer 32 %! uvm_hdl_release $end
 $upscope $end
 
 $scope function uvm_hdl_read $end
-$var integer 32 )! uvm_hdl_read $end
-$var reg 1024 *! value [1023:0] $end
+$var integer 32 &! uvm_hdl_read $end
+$var reg 1024 '! value [1023:0] $end
 $upscope $end
 
 $scope function uvm_dpi_get_next_arg_c $end
@@ -166,14 +163,14 @@ $scope function uvm_dpi_regcomp $end
 $upscope $end
 
 $scope function uvm_dpi_regexec $end
-$var integer 32 +! uvm_dpi_regexec $end
+$var integer 32 (! uvm_dpi_regexec $end
 $upscope $end
 
 $scope function uvm_dpi_regfree $end
 $upscope $end
 
 $scope function uvm_re_match $end
-$var integer 32 ,! uvm_re_match $end
+$var integer 32 )! uvm_re_match $end
 $upscope $end
 
 $scope function uvm_dump_re_cache $end
@@ -186,55 +183,55 @@ $scope function uvm_revision_string $end
 $upscope $end
 
 $scope function uvm_radix_to_string $end
-$var integer 32 -! radix $end
+$var integer 32 *! radix $end
 $upscope $end
 
 $scope function uvm_instance_scope $end
-$var reg 8 .! c [7:0] $end
-$var integer 32 /! pos $end
+$var reg 8 +! c [7:0] $end
+$var integer 32 ,! pos $end
 $upscope $end
 
 $scope function uvm_oneway_hash $end
-$var integer 32 0! uvm_oneway_hash $end
-$var integer 32 1! seed $end
-$var reg 1 2! msb $end
-$var reg 8 3! current_byte [7:0] $end
-$var reg 32 4! crc1 [31:0] $end
+$var integer 32 -! uvm_oneway_hash $end
+$var integer 32 .! seed $end
+$var reg 1 /! msb $end
+$var reg 8 0! current_byte [7:0] $end
+$var reg 32 1! crc1 [31:0] $end
 $upscope $end
 
 $scope function uvm_create_random_seed $end
-$var integer 32 5! uvm_create_random_seed $end
+$var integer 32 2! uvm_create_random_seed $end
 $upscope $end
 
 $scope function uvm_object_value_str $end
 $upscope $end
 
 $scope function uvm_leaf_scope $end
-$var reg 8 6! scope_separator [7:0] $end
-$var reg 8 7! bracket_match [7:0] $end
-$var integer 32 8! pos $end
-$var integer 32 9! bmatches $end
+$var reg 8 3! scope_separator [7:0] $end
+$var reg 8 4! bracket_match [7:0] $end
+$var integer 32 5! pos $end
+$var integer 32 6! bmatches $end
 $upscope $end
 
 $scope function uvm_vector_to_string $end
-$var reg 4096 :! value [4095:0] $end
-$var integer 32 ;! size $end
-$var integer 32 <! radix $end
+$var reg 4096 7! value [4095:0] $end
+$var integer 32 8! size $end
+$var integer 32 9! radix $end
 $upscope $end
 
 $scope function uvm_get_array_index_int $end
-$var integer 32 =! uvm_get_array_index_int $end
-$var reg 1 >! is_wildcard $end
-$var integer 32 ?! i $end
+$var integer 32 :! uvm_get_array_index_int $end
+$var reg 1 ;! is_wildcard $end
+$var integer 32 <! i $end
 $upscope $end
 
 $scope function uvm_get_array_index_string $end
-$var reg 1 @! is_wildcard $end
-$var integer 32 A! i $end
+$var reg 1 =! is_wildcard $end
+$var integer 32 >! i $end
 $upscope $end
 
 $scope function uvm_is_array $end
-$var reg 1 B! uvm_is_array $end
+$var reg 1 ?! uvm_is_array $end
 $upscope $end
 
 $scope function uvm_has_wildcard $end
@@ -247,80 +244,80 @@ $scope function global_stop_request $end
 $upscope $end
 
 $scope function set_global_timeout $end
-$var time 64 C! timeout $end
-$var reg 1 D! overridable $end
+$var time 64 @! timeout $end
+$var reg 1 A! overridable $end
 $upscope $end
 
 $scope function set_global_stop_timeout $end
-$var time 64 E! timeout $end
+$var time 64 B! timeout $end
 $upscope $end
 
 $scope function uvm_report_enabled $end
-$var reg 1 F! uvm_report_enabled $end
-$var integer 32 G! verbosity $end
-$var reg 2 H! severity [1:0] $end
+$var reg 1 C! uvm_report_enabled $end
+$var integer 32 D! verbosity $end
+$var reg 2 E! severity [1:0] $end
 $upscope $end
 
 $scope function uvm_report $end
-$var reg 2 I! severity [1:0] $end
-$var integer 32 J! verbosity $end
-$var integer 32 K! line $end
+$var reg 2 F! severity [1:0] $end
+$var integer 32 G! verbosity $end
+$var integer 32 H! line $end
 $upscope $end
 
 $scope function uvm_report_info $end
-$var integer 32 L! verbosity $end
-$var integer 32 M! line $end
+$var integer 32 I! verbosity $end
+$var integer 32 J! line $end
 $upscope $end
 
 $scope function uvm_report_warning $end
-$var integer 32 N! verbosity $end
-$var integer 32 O! line $end
+$var integer 32 K! verbosity $end
+$var integer 32 L! line $end
 $upscope $end
 
 $scope function uvm_report_error $end
-$var integer 32 P! verbosity $end
-$var integer 32 Q! line $end
+$var integer 32 M! verbosity $end
+$var integer 32 N! line $end
 $upscope $end
 
 $scope function uvm_report_fatal $end
-$var integer 32 R! verbosity $end
-$var integer 32 S! line $end
+$var integer 32 O! verbosity $end
+$var integer 32 P! line $end
 $upscope $end
 
 $scope function uvm_string_to_severity $end
-$var reg 1 T! uvm_string_to_severity $end
-$var reg 2 U! sev [1:0] $end
+$var reg 1 Q! uvm_string_to_severity $end
+$var reg 2 R! sev [1:0] $end
 $upscope $end
 
 $scope function uvm_string_to_action $end
 $upscope $end
 
 $scope function set_config_int $end
-$var reg 4096 V! value [4095:0] $end
+$var reg 4096 S! value [4095:0] $end
 $upscope $end
 
 $scope function set_config_object $end
-$var reg 1 W! clone $end
+$var reg 1 T! clone $end
 $upscope $end
 
 $scope function set_config_string $end
 $upscope $end
 
 $scope function uvm_is_match $end
-$var reg 1 X! uvm_is_match $end
+$var reg 1 U! uvm_is_match $end
 $upscope $end
 
 $scope function uvm_string_to_bits $end
-$var reg 115200 Y! uvm_string_to_bits [115199:0] $end
+$var reg 115200 V! uvm_string_to_bits [115199:0] $end
 $upscope $end
 
 $scope function uvm_bits_to_string $end
-$var reg 115200 Z! str [115199:0] $end
+$var reg 115200 W! str [115199:0] $end
 $upscope $end
 
 $scope task uvm_wait_for_nba_region $end
-$var integer 32 [! nba $end
-$var integer 32 \! next_nba $end
+$var integer 32 X! nba $end
+$var integer 32 Y! next_nba $end
 $upscope $end
 
 $scope function uvm_split_string $end
@@ -345,939 +342,1632 @@ $enddefinitions $end
 #0
 $dumpvars
 0!
-x?
-x@
-xA
-xB
-xC
-bx E
+b0zzzzzzzzz ?
+z@
+zA
+zB
+zC
+zD
+zE
 bx F
 bx G
 bx H
-xI
-xJ
-xK
-xL
+bx I
+bx J
+bx K
+bx L
 bx M
-bx N
-bx O
-bx P
-bx Q
-bx R
-0@!
-0B!
-0T!
-b0 U!
-bx Y!
-bx Z!
+xN
+xO
+0=!
+0?!
+0Q!
+b0 R!
+bx V!
+bx W!
+bx |
+bx ~
 bx !!
-bx #!
 bx $!
 bx '!
-bx *!
-1z
-12!
-b1110001 3!
-b11011110001000001010011110111111 4!
-b1 :!
-0>!
-0D!
-0F!
-b0 H!
-b0 I!
-bx V!
-0W!
-0X!
+1w
+1/!
+b1110001 0!
+b11011110001000001010011110111111 1!
+b1 7!
+0;!
+0A!
+0C!
+b0 E!
+b0 F!
+bx S!
+0T!
+0U!
 b1000 "
 b100 #
-b10000000000 S
-b1000000000000 T
-b1111000000000000000000000000 U
-b10001 V
-b10101010101 W
-b101010101 X
-b101010101 Y
-b0 Z
-b1 [
-b10 \
-b100 ]
-b1000 ^
-b10000 _
-b100000 `
-b1000000 a
-b10000000 b
-b100000000 c
-b1000000000 d
-b10000000000000 e
-b100000000000000 f
-b1000000000000000 g
-b10000000000000000 h
-b100000000000000000 i
-b100000000000000001 j
-b100000000000000010 k
-b100000000000000011 l
-b100000000000000100 m
-b100000000000000101 n
-b100000000000000110 o
-b100000000000000110 p
-b100000000000000111 q
-b100000000000001000 r
-b100000000000001000 s
-b100110000010001110110110110 t
-b1 u
-b1111000 v
-b1111000 w
-b1110111111 x
-b11100000111111111 y
-b0 -!
-b101110 6!
-b0 7!
-b101011 8!
-b11111111111111111111111111111111 9!
-b0 A!
+b10000000000 P
+b1000000000000 Q
+b1111000000000000000000000000 R
+b10001 S
+b10101010101 T
+b101010101 U
+b101010101 V
+b0 W
+b1 X
+b10 Y
+b100 Z
+b1000 [
+b10000 \
+b100000 ]
+b1000000 ^
+b10000000 _
+b100000000 `
+b1000000000 a
+b10000000000000 b
+b100000000000000 c
+b1000000000000000 d
+b10000000000000000 e
+b100000000000000000 f
+b100000000000000001 g
+b100000000000000010 h
+b100000000000000011 i
+b100000000000000100 j
+b100000000000000101 k
+b100000000000000110 l
+b100000000000000110 m
+b100000000000000111 n
+b100000000000001000 o
+b100000000000001000 p
+b100110000010001110110110110 q
+b1 r
+b1111000 s
+b1111000 t
+b1110111111 u
+b11100000111111111 v
+b0 *!
+b101110 3!
+b0 4!
+b101011 5!
+b11111111111111111111111111111111 6!
+b0 >!
+b0 z
+b0 {
 b0 }
-b0 ~
-b0 "!
+b0 #!
+b0 %!
 b0 &!
-b0 (!
+b1 (!
 b0 )!
-b1 +!
-b0 ,!
-b1101001011000001111100000011110 {
-b101110 .!
-b111 /!
-b10101001101110011101011100111111 0!
-b1101001011000001111100000011110 1!
-b100010010100011111100101110111 5!
-b100000 ;!
-b10000000000000000000000000 <!
-b0 =!
-b0 ?!
-b111110100 G!
-b0 J!
+b1101001011000001111100000011110 x
+b101110 +!
+b111 ,!
+b10101001101110011101011100111111 -!
+b1101001011000001111100000011110 .!
+b100010010100011111100101110111 2!
+b100000 8!
+b10000000000000000000000000 9!
+b0 :!
+b0 <!
+b111110100 D!
+b0 G!
+b0 H!
+b11001000 I!
+b11011001 J!
 b0 K!
-b11001000 L!
-b11011001 M!
+b0 L!
+b0 M!
 b0 N!
 b0 O!
 b0 P!
-b0 Q!
-b0 R!
-b0 S!
-b100100 [!
-b100100 \!
-b11111111111111111111111111111111 |
-bx %!
-bx C!
-bx E!
-0$
-x%
-x&
-x'
-x(
-x,
+b100100 X!
+b100100 Y!
+b11111111111111111111111111111111 y
+bx "!
+bx @!
+bx B!
+x>
+x=
 x+
 x*
 x)
-x.
-x-
-x6
-x5
-x4
+x(
+x'
+x&
+x%
+x$
 x3
 x2
 x1
 x0
 x/
-x>
-x=
+x.
+x-
+x,
+x8
+04
+x5
 x<
 x;
 x:
 x9
-x8
+x6
 x7
-xD
 $end
 #5
 1!
+14
+#6
+05
+16
+07
+18
+13
+02
+01
+00
+1/
+0.
+0-
+0,
+0+
+1*
+0)
+0(
+1'
+0&
+0%
 1$
-b0 G
-b0 H
-b0 F
-b0 Q
-b0 R
-0K
-b0 N
-0I
-0?
+0>
+0=
+1<
+0;
+1:
+09
+#10
+0!
+04
+#15
+1!
+14
+#20
+0!
+04
+#25
+1!
+14
+b100101 Y!
+b10101001101110011101011101000000 2!
+b100101 X!
+#26
+17
+08
+12
+11
+10
+0/
+1.
+1-
+1)
+1(
+1&
+1>
+1;
+#30
+0!
+04
+#35
+1!
+14
+b10111110 H
+b111 J
+1N
+b0 M
+#40
+0!
+04
+#45
+1!
+14
+#50
+0!
+04
+#55
+1!
+14
+b100110 Y!
+b10101001101110011101011101000010 2!
+b100110 X!
+#56
+07
+02
+1/
+1,
+1+
+0)
+0(
+0&
+0$
+0>
+0:
+#60
+0!
+04
+#65
+1!
+14
+#70
+0!
+04
+#75
+1!
+14
+#80
+0!
+04
+#85
+1!
+14
+b100111 Y!
+b10101001101110011101011101000101 2!
+b100111 X!
+#86
+17
+18
+03
+01
+00
+0/
+0.
+0*
+1(
+1&
+1%
+1$
+1>
+1=
+0;
+#90
+0!
+04
+#95
+1!
+14
+b11111001 H
+b11000000 I
+b1 J
+1O
+#100
+0!
+04
+#105
+1!
+14
+b0 ?
+0@
 0A
 0B
 0C
-0@
-b0 O
-#6
-1'
-1&
-1(
-1>
-0=
-0<
-0;
-1:
-09
-08
-07
-06
-15
+0D
+0E
+b111001 ?
+#110
+0!
 04
+#115
+1!
+14
+b0 ?
+b111001 ?
+b101000 Y!
+b10101001101110011101011101001001 2!
+b101000 X!
+#116
+08
+12
+10
+1/
+1)
+0(
+0'
+0%
+1:
+#120
+0!
+04
+#125
+1!
+14
+b0 ?
+b111001 ?
+b10100101 H
+b11011010 I
+b101 J
+#130
+0!
+04
+#135
+1!
+14
+b0 ?
+b10100100 ?
+#140
+0!
+04
+#145
+1!
+14
+b0 ?
+b10100100 ?
+b101001 Y!
+b10101001101110011101011101001110 2!
+b101001 X!
+#146
+07
+18
+13
+0/
+1.
+0-
+0+
+1*
+1'
+0&
+0$
+0>
+0<
+1;
+0:
+19
+#150
+0!
+04
+#155
+1!
+14
+b0 ?
+b10000000 ?
+b10101011 I
+b1010 J
+#160
+0!
+04
+#165
+1!
+14
+b0 ?
+b1010110 ?
+#170
+0!
+04
+#175
+1!
+14
+b0 ?
+b1010110 ?
+b101010 Y!
+b10101001101110011101011101010100 2!
+b101010 X!
+#176
+17
 03
+11
+1/
+0*
+1>
+1<
+0;
+09
+#180
+0!
+04
+#185
+1!
+14
+b0 ?
+b10100 H
+b10111110 I
+b1 J
+b1001010 K
+b10101011 L
+bx ?
+#190
+0!
+04
+#195
+1!
+14
+b0 ?
+1A
+b11111111101010110 ?
+#200
+0!
+04
+#205
+1!
+14
+b0 ?
+0A
+1A
+b11111111101010110 ?
+b101011 Y!
+b10101001101110011101011101011011 2!
+b101011 X!
+#206
+13
+02
+0.
+1*
+0)
+1(
+0'
+1%
+1;
+#210
+0!
+04
+#215
+1!
+14
+b0 ?
+0A
+1A
+b11111111101010110 ?
+b1001010 H
+b10011101 I
+b11 J
+#220
+0!
+04
+#225
+1!
+14
+b0 ?
+0A
+1A
+b11111111110101100 ?
+#230
+0!
+04
+#235
+1!
+14
+b0 ?
+0A
+1A
+b11111111110101100 ?
+b101100 Y!
+b10101001101110011101011101100011 2!
+b101100 X!
+#236
+08
 12
 01
 00
-1/
 1.
+0*
+1&
+1$
+0;
+#240
+0!
+04
+#245
+1!
+14
+b0 ?
+0A
+1A
+b11111111110101101 ?
+b11101000 H
+b10110011 I
+b1 J
+#250
+0!
+04
+#255
+1!
+14
+b0 ?
+0A
+b110101 ?
+#260
+0!
+04
+#265
+1!
+14
+b0 ?
+b110101 ?
+b101101 Y!
+b10101001101110011101011101101100 2!
+b101101 X!
+#266
+07
+03
+02
+11
+0/
 1-
+1)
+0&
+0%
+0$
+0>
+0=
+0<
+1;
+#270
+0!
+04
+#275
+1!
+14
+b0 ?
+b1011111 ?
+#280
+0!
+04
+#285
+1!
+14
+b0 ?
+b1011111 ?
+#290
+0!
+04
+#295
+1!
+14
+b0 ?
+b1011111 ?
+b101110 Y!
+b10101001101110011101011101110110 2!
+b101110 X!
+#296
+17
+13
+12
+1/
+0.
+0(
+1'
+1&
+1%
+1=
+1<
+1:
+#300
+0!
+04
+#305
+1!
+14
+b0 ?
+b110101 ?
+b11010111 I
+b111 J
+#310
+0!
+04
+#315
+1!
+14
+b0 ?
+b11011000 ?
+#320
+0!
+04
+#325
+1!
+14
+b0 ?
+b11011000 ?
+b101111 Y!
+b10101001101110011101011110000001 2!
+b101111 X!
+#326
+03
+01
+1.
+0-
+0,
+1*
+1(
+1>
+0:
+#330
+0!
+04
+#335
+1!
+14
+b0 ?
+b11011000 ?
+b1111110 H
+b110010 I
+b11 J
+#340
+0!
+04
+#345
+1!
+14
+b0 ?
+b1001100 ?
+#350
+0!
+04
+#355
+1!
+14
+b0 ?
+b1001100 ?
+b110000 Y!
+b10101001101110011101011110001101 2!
+b110000 X!
+#356
+13
+02
+0/
+0.
+1-
+1,
+1+
+0)
+0(
+0'
+1$
+0<
+#360
+0!
+04
+#365
+1!
+14
+b0 ?
+b1001100 ?
+b11100011 H
+b11000001 I
+b10 J
+#370
+0!
+04
+#375
+1!
+14
+b0 ?
+b110100100 ?
+1@
+#380
+0!
+04
+#385
+1!
+14
+b0 ?
+0@
+b110100100 ?
+1@
+b110001 Y!
+b10101001101110011101011110011010 2!
+b110001 X!
+#386
+07
+18
+12
+11
+10
+0&
+0=
+0;
+1:
+19
+#390
+0!
+04
+#395
+1!
+14
+b0 ?
+0@
+b1 ?
+b11000011 H
+b1100 J
+#400
+0!
+04
+#405
+1!
+14
+b0 ?
+b10000111 F
+b10000111 G
+b10000111 ?
+1E
+#410
+0!
+04
+#415
+1!
+14
+b0 ?
+0E
+b10000111 ?
+1E
+#416
+1/
+0-
 0,
 0+
 0*
-0)
-1%
-0L
-b0 M
-0J
-b0 E
-b0 P
-0D
-#10
-0!
-0$
-#15
-1!
-1$
-#20
-0!
-0$
-#25
-1!
-1$
-b100101 \!
-b10101001101110011101011101000000 5!
-b100101 [!
-#26
-0(
-1=
-1<
-1;
-0:
-19
-18
-14
-13
-11
-1+
 0%
-#30
-0!
-0$
-#35
-1!
-1$
-1?
-b10111110 G
-b1101111 H
-b10 F
-1K
-b11 N
-#40
-0!
-0$
-#45
-1!
-1$
-b10111110 Q
-b1101111 R
-1L
-b10 M
-0?
-b100101101 E
-1D
-#50
-0!
-0$
-#55
-1!
-1$
-b0 E
-b100101101 E
-b100110 \!
-b10101001101110011101011101000010 5!
-b100110 [!
-#56
-0=
-1:
-17
-16
-04
-03
-01
-0/
-1,
-0+
-1)
-#60
-0!
-0$
-#65
-1!
-1$
-b10011 G
-b11111101 H
-b1001 F
-b0 E
-b100101101 E
-#70
-0!
-0$
-#75
-1!
-1$
-b10011 Q
-b11111101 R
-b1001 M
-b1001111011000 P
-b0 E
-0D
-#80
-0!
-0$
-#85
-1!
-1$
-b0 P
-b1001111011000 P
-b1001111011000 E
-#90
-0!
-0$
-#95
-1!
-1$
-b0 P
-b1001111011000 P
-b100111 \!
-b10101001101110011101011101000101 5!
-b100111 [!
-#96
-1(
-0>
-0<
-0;
-0:
-09
-05
-13
-11
-10
-1/
-0,
-1+
-0)
-#100
-0!
-0$
-#105
-1!
-1$
-b11111001 G
-b11000000 H
-b10 F
-1I
-b0 P
-b1001111011000 P
-#110
-0!
-0$
-#115
-1!
-1$
-b11111001 Q
-b11000000 R
-b10 M
-1J
-b0 E
-b0 P
-b110111010 E
-1D
-#120
-0!
-0$
-#125
-1!
-1$
-b0 E
-b110111010 E
-b101000 \!
-b10101001101110011101011101001001 5!
-b101000 [!
-#126
-0(
-1=
-1;
-1:
-14
-03
-02
-00
-#130
-0!
-0$
-#135
-1!
-1$
-b10100101 G
-b11011010 H
-0I
-b0 E
-b110111010 E
-#140
-0!
-0$
-#145
-1!
-1$
-b10100101 Q
-b11011010 R
-0J
-b0 E
-b101111111 E
-#150
-0!
-0$
-#155
-1!
-1$
-b0 E
-b101111111 E
-b101001 \!
-b10101001101110011101011101001110 5!
-b101001 [!
-#156
-1(
-1>
-0:
-19
-08
-06
-15
-12
-01
-0/
-0+
-1%
-b0 G
-b0 H
-b0 F
-b0 Q
-b0 R
-0L
-b0 M
-0K
-b0 N
-b0 E
-0D
-#160
-0!
-0$
-#165
-1!
-1$
-#170
-0!
-0$
-#175
-1!
-1$
-#180
-0!
-0$
-#185
-1!
-1$
-b101010 \!
-b10101001101110011101011101010100 5!
-b101010 [!
-#186
-0>
-1<
-1:
-05
-1,
-1)
-0%
-#190
-0!
-0$
-#195
-1!
-1$
-1?
-b10100 G
-b10111110 H
-b1001 F
-1K
-b11 N
-1I
-#200
-0!
-0$
-#205
-1!
-1$
-b10100 Q
-b10111110 R
-1L
-b1001 M
-1J
-0?
-b111110101011 P
-#210
-0!
-0$
-#215
-1!
-1$
-b0 P
-b111110101011 P
-b111110101011 E
-#220
-0!
-0$
-#225
-1!
-1$
-b0 P
-b111110101011 P
-b101011 \!
-b10101001101110011101011101011011 5!
-b101011 [!
-#226
-1>
-0=
-09
-15
-04
-13
-02
-10
-0,
-0)
-#230
-0!
-0$
-#235
-1!
-1$
-b1001010 G
-b10011101 H
-b0 F
-b0 P
-b111110101011 P
-#240
-0!
-0$
-#245
-1!
-1$
-b1001010 Q
-b10011101 R
-b0 M
-b0 E
-b0 P
-b11100111 E
-#250
-0!
-0$
-#255
-1!
-1$
-b0 E
-b11100111 E
-b101100 \!
-b10101001101110011101011101100011 5!
-b101100 [!
-#256
-0(
-1=
-0<
-0;
-19
-05
-11
-1/
-1+
-1%
-b0 G
-b0 H
-b0 Q
-b0 R
-0L
-0J
-0K
-b0 N
-0I
-b0 E
-#260
-0!
-0$
-#265
-1!
-1$
-#270
-0!
-0$
-#275
-1!
-1$
-#280
-0!
-0$
-#285
-1!
-1$
-b101101 \!
-b10101001101110011101011101101100 5!
-b101101 [!
-#286
-0'
-0>
-0=
-1<
-0:
-18
-14
-01
-00
-0/
-0+
-#290
-0!
-0$
-#295
-1!
-1$
-#300
-0!
-0$
-#305
-1!
-1$
-#310
-0!
-0$
-#315
-1!
-1$
-b101110 \!
-b10101001101110011101011101110110 5!
-b101110 [!
-#316
-1>
-1=
-1:
-09
-03
-12
-11
-10
-1,
-1)
-0%
-#320
-0!
-0$
-#325
-1!
-1$
-#330
-0!
-0$
-#335
-1!
-1$
-#340
-0!
-0$
-#345
-1!
-1$
-#350
-0!
-0$
-#355
-1!
-1$
-b101111 \!
-b10101001101110011101011110000001 5!
-b101111 [!
-#356
-0>
-0<
-19
-08
-07
-15
-13
-0,
-0)
-#360
-0!
-0$
-#365
-1!
-1$
-#370
-0!
-0$
-#375
-1!
-1$
-#380
-0!
-0$
-#385
-1!
-1$
-b110000 \!
-b10101001101110011101011110001101 5!
-b110000 [!
-#386
-1>
-0=
-0:
-09
-18
-17
-16
-04
-03
-02
-1/
-1+
-#390
-0!
-0$
-#395
-1!
-1$
-#400
-0!
-0$
-#405
-1!
-1$
-#410
-0!
-0$
-#415
-1!
-1$
-b110001 \!
-b10101001101110011101011110011010 5!
-b110001 [!
-#416
-1(
-1<
-1:
-08
-06
-05
-12
-00
 #420
 0!
-0$
+04
 #425
 1!
-1$
+14
+b0 ?
+0E
+b10000111 ?
+1E
+b10000000 H
 #430
 0!
-0$
+04
 #435
 1!
-1$
+14
+b0 ?
+0E
+b1 F
+b1 G
+b1 ?
+1E
 #440
 0!
-0$
+04
 #445
 1!
-1$
-b110010 \!
-b10101001101110011101011110101000 5!
-b110010 [!
+14
+b0 ?
+0E
+b1 ?
+1E
 #446
-1'
-0>
-0:
-19
-07
-13
-10
-1,
-0+
+03
+02
+00
+1.
+1-
 1)
-1%
+1(
+1'
+0$
+1=
 #450
 0!
-0$
+04
 #455
 1!
-1$
+14
+b0 ?
+0E
+b1 ?
+1E
+b11100 H
+b1110100 I
 #460
 0!
-0$
+04
 #465
 1!
-1$
+14
+b0 ?
+0E
+b11100 F
+b11100 G
+b11000001 ?
+1E
 #470
 0!
-0$
+04
 #475
 1!
-1$
+14
+b0 ?
+0E
+b11000001 ?
+1E
+b110010 Y!
+b10101001101110011101011110101000 2!
+b110010 X!
+#476
+08
+12
+0/
+0-
+1,
+1+
+0'
+1&
+1%
+0>
 #480
 0!
-0$
+04
 #485
 1!
+14
+b0 ?
+0E
+b11000001 ?
+1E
+b10100110 I
+#490
+0!
+04
+#495
+1!
+14
+b0 ?
+0E
+b1110000 G
+b111 ?
+1E
+#500
+0!
+04
+#505
+1!
+14
+b0 ?
+0E
+b111 ?
+1E
+#506
+18
+13
+02
+10
+1/
+0.
+1-
+0+
+1'
+0&
 1$
-b110011 \!
-b110100 \!
-b110101 \!
-b110011 [!
-b110100 [!
-b110101 [!
-b110110 \!
-b110111 \!
-b110110 [!
-b110111 [!
-b100010010100011111100110001001 5!
-b11000110000100000000110111010111 5!
-b11101110011011011010100001111110 5!
-b10100101010011101001101111000110 5!
-b10000101011110000101101001110000 5!
-b1101010010000000011110000111011 5!
-b1101100011101010110011001001 5!
-b10010001011111111101001010110100 5!
-b1000100010000100000101001001110 5!
-b11000111110000000110000010010110 5!
-b10011010111111101001000111111111 5!
-b11011001000011001111110000110000 5!
-b10011001001001111011000001101101 5!
-b11000110010001001111100111001001 5!
-b101000000101110110100001011100 5!
-b1011000110000000101000001010 5!
-b101001110110111100001011011111 5!
-b1100111101010101010101000111 5!
-b110101101100000000011011111010 5!
-b11010110001111011101111111101 5!
-b10000000100000100110111000000111 5!
-b1011011101111101001001001000011 5!
-b1000100010011101010011101110001 5!
-b1101010111111011111100100010100 5!
-b11110100100000100111100010010 5!
-b10111010001000010111000001111110 5!
-b11100101011111001001011000010010 5!
-b1111101000101101001110110101111 5!
-b111000011000110011100110101111 5!
-b11011100000111001000010000111110 5!
-b100010010100011111100110011100 5!
-b11000110000100000000110111101010 5!
-b11101110011011011010100010010001 5!
-b10100101010011101001101111011001 5!
-b10000101011110000101101010000011 5!
-b1101010010000000011110001001110 5!
-b1101100011101010110011011100 5!
-b10010001011111111101001011000111 5!
-b1000100010000100000101001100001 5!
-b11000111110000000110000010101001 5!
-b10011010111111101001001000010010 5!
-b11011001000011001111110001000011 5!
-b10011001001001111011000010000000 5!
-b11000110010001001111100111011100 5!
-b101000000101110110100001101111 5!
-b1011000110000000101000011101 5!
-b101001110110111100001011110010 5!
-b1100111101010101010101011010 5!
-b110101101100000000011100001101 5!
-b11010110001111011110000010000 5!
-b10000000100000100110111000011010 5!
-b1011011101111101001001001010110 5!
-b1000100010011101010011110000100 5!
-b1101010111111011111100100100111 5!
-b11110100100000100111100100101 5!
-b10111010001000010111000010010001 5!
-b11100101011111001001011000100101 5!
-b1111101000101101001110111000010 5!
-b111000011000110011100111000010 5!
-b11011100000111001000010001010001 5!
-b100010010100011111100110110000 5!
-b11000110000100000000110111111110 5!
-b11101110011011011010100010100101 5!
-b10100101010011101001101111101101 5!
-b10000101011110000101101010010111 5!
-b1101010010000000011110001100010 5!
-b1101100011101010110011110000 5!
-b10010001011111111101001011011011 5!
-b1000100010000100000101001110101 5!
-b11000111110000000110000010111101 5!
-b10011010111111101001001000100110 5!
-b11011001000011001111110001010111 5!
-b10011001001001111011000010010100 5!
-b11000110010001001111100111110000 5!
-b101000000101110110100010000011 5!
-b1011000110000000101000110001 5!
-b101001110110111100001100000110 5!
-b1100111101010101010101101110 5!
-b110101101100000000011100100001 5!
-b11010110001111011110000100100 5!
-b10000000100000100110111000101110 5!
-b1011011101111101001001001101010 5!
-b1000100010011101010011110011000 5!
-b1101010111111011111100100111011 5!
-b11110100100000100111100111001 5!
-b10111010001000010111000010100101 5!
-b11100101011111001001011000111001 5!
-b1111101000101101001110111010110 5!
-b111000011000110011100111010110 5!
-b11011100000111001000010001100101 5!
-b11011100000111001000010001111010 5!
-b111000011000110011100111101011 5!
-b1111101000101101001110111101011 5!
-b10000000100000100110111001000011 5!
-b10100101010011101001110000000010 5!
-b100010010100011111100111000101 5!
-b11000110000100000000111000010011 5!
-b11101110011011011010100010111010 5!
-b1101010010000000011110001110111 5!
-b10000101011110000101101010101100 5!
-b11010110001111011110000111001 5!
-b10011010111111101001001000111011 5!
-b1101100011101010110100000101 5!
-b10010001011111111101001011110000 5!
-b1000100010000100000101010001010 5!
-b11000111110000000110000011010010 5!
-b11011001000011001111110001101100 5!
-b10011001001001111011000010101001 5!
-b110101101100000000011100110110 5!
-b11000110010001001111101000000101 5!
-b101000000101110110100010011000 5!
-b1011000110000000101001000110 5!
-b101001110110111100001100011011 5!
-b1100111101010101010110000011 5!
-b1101010111111011111100101010000 5!
-b1011011101111101001001001111111 5!
-b1000100010011101010011110101101 5!
-b11100101011111001001011001001110 5!
-b11110100100000100111101001110 5!
-b10111010001000010111000010111010 5!
+#510
+0!
+04
+#515
+1!
+14
+b0 ?
+0E
+b111 ?
+1E
+b11011101 I
+#520
+0!
+04
+#525
+1!
+14
+b0 ?
+0E
+b111000 F
+b111000 G
+b10000011 ?
+1E
+#530
+0!
+04
+#535
+1!
+14
+b0 ?
+0E
+b10000011 ?
+1E
+#536
+08
+01
+00
+0-
+0,
+1*
+0)
+0(
+0'
+0%
+0=
+#540
+0!
+04
+#545
+1!
+14
+b0 ?
+0E
+b10000011 ?
+1E
+#550
+0!
+04
+#555
+1!
+14
+b0 ?
+0E
+b10000011 ?
+1E
+#560
+0!
+04
+#565
+1!
+14
+b0 ?
+0E
+b10000011 ?
+1E
+#566
+18
+03
+11
+0/
+1.
+1,
+0*
+1)
+1%
+1>
+#570
+0!
+04
+#575
+1!
+14
+b0 ?
+0E
+b10000011 ?
+1E
+b11000100 H
+#580
+0!
+04
+#585
+1!
+14
+b0 ?
+0E
+b10001001 F
+b10001001 G
+b10011000 ?
+1E
+#590
+0!
+04
+#595
+1!
+14
+b0 ?
+0E
+b10011000 ?
+1E
+#596
+12
+10
+1/
+1-
+0,
+1+
+1*
+1(
+0%
+0$
+0>
+1=
+#600
+0!
+04
+#605
+1!
+14
+b0 ?
+0E
+b10011000 ?
+1E
+b1111110 I
+#610
+0!
+04
+#615
+1!
+14
+b0 ?
+0E
+b11000100 F
+b10011 G
+b110001 ?
+1E
+#620
+0!
+04
+#625
+1!
+14
+b0 ?
+0E
+b110001 ?
+1E
+#626
+08
+13
+02
+0/
+0-
+1,
+0)
+1'
+1&
+1%
+1$
+#630
+0!
+04
+#635
+1!
+14
+b0 ?
+0E
+b110001 ?
+1E
+b10101101 I
+#640
+0!
+04
+#645
+1!
+14
+b0 ?
+0E
+b10001001 F
+b10001001 G
+b10011000 ?
+1E
+#650
+0!
+04
+#655
+1!
+14
+b0 ?
+0E
+b10011000 ?
+1E
+#656
+03
+01
+0.
+0,
+0+
+0*
+1)
+0(
+0$
+0=
+#660
+0!
+04
+#665
+1!
+14
+b0 ?
+0E
+b10011000 ?
+1E
+#670
+0!
+04
+#675
+1!
+14
+b0 ?
+0E
+b10011000 ?
+1E
+#680
+0!
+04
+#685
+1!
+14
+b0 ?
+0E
+b10011000 ?
+1E
+#686
+12
+11
+1/
+1+
+0)
+1>
+#690
+0!
+04
+#695
+1!
+14
+b0 ?
+0E
+b10011000 ?
+1E
+b1110001 H
+#700
+0!
+04
+#705
+1!
+14
+b0 ?
+0E
+b11100010 F
+b11100010 G
+b101110 ?
+1E
+#710
+0!
+04
+#715
+1!
+14
+b0 ?
+0E
+b101110 ?
+1E
+#716
+13
+02
+00
+0/
+1-
+1,
+1(
+0'
+0%
+1$
+1=
+#720
+0!
+04
+#725
+1!
+14
+b0 ?
+0E
+b101110 ?
+1E
+b10101001 H
+b11000101 I
+#730
+0!
+04
+#735
+1!
+14
+b0 ?
+0E
+b1010011 F
+b1010011 G
+b110101 ?
+1E
+#740
+0!
+04
+#745
+1!
+14
+b0 ?
+0E
+b110101 ?
+1E
+b110011 Y!
+b10101001101110011101011110110111 2!
+b110011 X!
+#746
+17
+01
+1.
+0,
+0+
+1)
+0$
+0>
+0=
+0:
+#750
+0!
+04
+#755
+1!
+14
+b0 ?
+0E
+b0zzzzzzzzz ?
+z@
+zA
+zB
+zC
+zD
+zE
+#760
+0!
+04
+#765
+1!
+14
+b0 ?
+0@
+0A
+0B
+0C
+0D
+0E
+b0zzzzzzzzz ?
+z@
+zA
+zB
+zC
+zD
+zE
+#770
+0!
+04
+#775
+1!
+14
+b0 ?
+0@
+0A
+0B
+0C
+0D
+0E
+b0zzzzzzzzz ?
+z@
+zA
+zB
+zC
+zD
+zE
+b110100 Y!
+b10101001101110011101011111000111 2!
+b110100 X!
+#776
+07
+18
+03
+11
+0-
+0)
+1'
+0&
+1%
+1$
+1>
+1;
+1:
+09
+#780
+0!
+04
+#785
+1!
+14
+b0 ?
+0@
+0A
+0B
+0C
+0D
+0E
+b110101 ?
+1E
+b11011000 H
+b110 J
+#790
+0!
+04
+#795
+1!
+14
+b0 ?
+0E
+b100111 ?
+#800
+0!
+04
+#805
+1!
+14
+b0 ?
+b100111 ?
+b110101 Y!
+b10101001101110011101011111011000 2!
+b110101 X!
+#806
+08
+13
+0.
+1-
+1+
+0(
+0$
+1=
+1<
+0:
+19
+#810
+0!
+04
+#815
+1!
+14
+b0 ?
+b100111 ?
+b1010001 H
+b1000101 I
+b1011 J
+#820
+0!
+04
+#825
+1!
+14
+b0 ?
+b10001010 ?
+#830
+0!
+04
+#835
+1!
+14
+b0 ?
+b10001010 ?
+b110110 Y!
+b10101001101110011101011111101010 2!
+b110110 X!
+#836
+17
+18
+03
+12
+01
+1/
+0-
+0+
+1*
+0'
+1$
+0;
+#840
+0!
+04
+#845
+1!
+14
+b0 ?
+b0zzzzzzzzz ?
+z@
+zA
+zB
+zC
+zD
+zE
+b11000010 H
+b10010 I
+b1001 J
+#850
+0!
+04
+#855
+1!
+14
+b0 ?
+0@
+0A
+0B
+0C
+0D
+0E
+b11000011 K
+b10011 L
+b11000101101110 ?
+#860
+0!
+04
+#865
+1!
+14
+b0 ?
+b111001111001 ?
+#870
+0!
+04
+#875
+1!
+14
+b0 ?
+b111001111001 ?
+b110111 Y!
+b10101001101110011101011111111101 2!
+b110111 X!
+#876
+07
+08
+11
+10
+1-
+1+
+0*
+1(
+0%
+0>
+0=
+#880
+0!
+04
+#885
+1!
+14
+b0 ?
+b10000100 ?
+#890
+0!
+04
+#895
+1!
+14
+b0 ?
+b10000100 ?
+#900
+0!
+04
+#905
+1!
+14
+b0 ?
+b10000100 ?
+b111000 Y!
+b111001 Y!
+b111010 Y!
+b111000 X!
+b111001 X!
+b111010 X!
+b111011 Y!
+b111100 Y!
+b111011 X!
+b111100 X!
+b100010010100011111100110001001 2!
+b11000110000100000000110111010111 2!
+b11101110011011011010100001111110 2!
+b10100101010011101001101111000110 2!
+b10000101011110000101101001110000 2!
+b1101010010000000011110000111011 2!
+b1101100011101010110011001001 2!
+b10010001011111111101001010110100 2!
+b1000100010000100000101001001110 2!
+b11000111110000000110000010010110 2!
+b10011010111111101001000111111111 2!
+b11011001000011001111110000110000 2!
+b10011001001001111011000001101101 2!
+b11000110010001001111100111001001 2!
+b101000000101110110100001011100 2!
+b1011000110000000101000001010 2!
+b101001110110111100001011011111 2!
+b1100111101010101010101000111 2!
+b110101101100000000011011111010 2!
+b11010110001111011101111111101 2!
+b10000000100000100110111000000111 2!
+b1011011101111101001001001000011 2!
+b1000100010011101010011101110001 2!
+b1101010111111011111100100010100 2!
+b11110100100000100111100010010 2!
+b10111010001000010111000001111110 2!
+b11100101011111001001011000010010 2!
+b1111101000101101001110110101111 2!
+b111000011000110011100110101111 2!
+b11011100000111001000010000111110 2!
+b100010010100011111100110011100 2!
+b11000110000100000000110111101010 2!
+b11101110011011011010100010010001 2!
+b10100101010011101001101111011001 2!
+b10000101011110000101101010000011 2!
+b1101010010000000011110001001110 2!
+b1101100011101010110011011100 2!
+b10010001011111111101001011000111 2!
+b1000100010000100000101001100001 2!
+b11000111110000000110000010101001 2!
+b10011010111111101001001000010010 2!
+b11011001000011001111110001000011 2!
+b10011001001001111011000010000000 2!
+b11000110010001001111100111011100 2!
+b101000000101110110100001101111 2!
+b1011000110000000101000011101 2!
+b101001110110111100001011110010 2!
+b1100111101010101010101011010 2!
+b110101101100000000011100001101 2!
+b11010110001111011110000010000 2!
+b10000000100000100110111000011010 2!
+b1011011101111101001001001010110 2!
+b1000100010011101010011110000100 2!
+b1101010111111011111100100100111 2!
+b11110100100000100111100100101 2!
+b10111010001000010111000010010001 2!
+b11100101011111001001011000100101 2!
+b1111101000101101001110111000010 2!
+b111000011000110011100111000010 2!
+b11011100000111001000010001010001 2!
+b100010010100011111100110110000 2!
+b11000110000100000000110111111110 2!
+b11101110011011011010100010100101 2!
+b10100101010011101001101111101101 2!
+b10000101011110000101101010010111 2!
+b1101010010000000011110001100010 2!
+b1101100011101010110011110000 2!
+b10010001011111111101001011011011 2!
+b1000100010000100000101001110101 2!
+b11000111110000000110000010111101 2!
+b10011010111111101001001000100110 2!
+b11011001000011001111110001010111 2!
+b10011001001001111011000010010100 2!
+b11000110010001001111100111110000 2!
+b101000000101110110100010000011 2!
+b1011000110000000101000110001 2!
+b101001110110111100001100000110 2!
+b1100111101010101010101101110 2!
+b110101101100000000011100100001 2!
+b11010110001111011110000100100 2!
+b10000000100000100110111000101110 2!
+b1011011101111101001001001101010 2!
+b1000100010011101010011110011000 2!
+b1101010111111011111100100111011 2!
+b11110100100000100111100111001 2!
+b10111010001000010111000010100101 2!
+b11100101011111001001011000111001 2!
+b1111101000101101001110111010110 2!
+b111000011000110011100111010110 2!
+b11011100000111001000010001100101 2!
+b11011100000111001000010001111010 2!
+b111000011000110011100111101011 2!
+b1111101000101101001110111101011 2!
+b10000000100000100110111001000011 2!
+b10100101010011101001110000000010 2!
+b100010010100011111100111000101 2!
+b11000110000100000000111000010011 2!
+b11101110011011011010100010111010 2!
+b1101010010000000011110001110111 2!
+b10000101011110000101101010101100 2!
+b11010110001111011110000111001 2!
+b10011010111111101001001000111011 2!
+b1101100011101010110100000101 2!
+b10010001011111111101001011110000 2!
+b1000100010000100000101010001010 2!
+b11000111110000000110000011010010 2!
+b11011001000011001111110001101100 2!
+b10011001001001111011000010101001 2!
+b110101101100000000011100110110 2!
+b11000110010001001111101000000101 2!
+b101000000101110110100010011000 2!
+b1011000110000000101001000110 2!
+b101001110110111100001100011011 2!
+b1100111101010101010110000011 2!
+b1101010111111011111100101010000 2!
+b1011011101111101001001001111111 2!
+b1000100010011101010011110101101 2!
+b11100101011111001001011001001110 2!
+b11110100100000100111101001110 2!
+b10111010001000010111000010111010 2!

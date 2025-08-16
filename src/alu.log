@@ -1,13 +1,17 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 16:43:57 on Aug 14,2025
+Start time: 13:34:55 on Aug 16,2025
 vlog -sv "+acc" "+fcover" -l alu.log alu_top.sv 
 -- Compiling module alu_design
 -- Compiling interface alu_interface
 ** Note: (vlog-2286) alu_package.sv(1): Using implicit +incdir+/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
 -- Compiling package alu_pkg
 -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-** Error: (vlog-13069) ** while parsing file included at alu_top.sv(4)
-** while parsing file included at alu_package.sv(9)
-** at alu_coverage.sv(54): near "default": syntax error, unexpected default.
-End time: 16:43:57 on Aug 14,2025, Elapsed time: 0:00:00
-Errors: 1, Warnings: 0
+-- Compiling package alu_top_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package alu_pkg
+-- Compiling module top
+
+Top level modules:
+	top
+End time: 13:34:56 on Aug 16,2025, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

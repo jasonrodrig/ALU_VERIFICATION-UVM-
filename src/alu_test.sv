@@ -19,7 +19,7 @@ class alu_test extends uvm_test;
 	endfunction
 
 	task run_phase(uvm_phase phase);
-		repeat(15) begin
+		repeat(20)begin
 			phase.raise_objection(this);
 			seq.start(alu_env.alu_agt.alu_seqr);
 			phase.drop_objection(this);
