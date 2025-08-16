@@ -1,1 +1,0 @@
-#this is a alu verification in uvm
